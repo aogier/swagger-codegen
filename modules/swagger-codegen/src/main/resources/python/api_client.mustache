@@ -52,6 +52,7 @@ class ApiClient(object):
         'date': datetime.date,
         'datetime': datetime.datetime,
         'object': object,
+        'binary_type': six.binary_type,
     }
 
     def __init__(self, configuration=None, header_name=None, header_value=None,
