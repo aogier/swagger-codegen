@@ -72,6 +72,7 @@ public class PythonClientCodegen extends DefaultCodegen implements CodegenConfig
         languageSpecificPrimitives.add("datetime");
         languageSpecificPrimitives.add("date");
         languageSpecificPrimitives.add("object");
+        languageSpecificPrimitives.add("binary_type");
 
         typeMapping.clear();
         typeMapping.put("integer", "int");
@@ -89,8 +90,8 @@ public class PythonClientCodegen extends DefaultCodegen implements CodegenConfig
         typeMapping.put("file", "file");
         // TODO binary should be mapped to byte array
         // mapped to String as a workaround
-        typeMapping.put("binary", "str");
-        typeMapping.put("ByteArray", "str");
+        typeMapping.put("binary", "binary_type");
+        typeMapping.put("ByteArray", "binary_type");
         // map uuid to string for the time being
         typeMapping.put("UUID", "str");
 
